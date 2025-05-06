@@ -9,7 +9,7 @@ const server = new McpServer({
 });
 
 // Define the 'get-time' tool
-server.tool("get-time", {
+server.tool("get-time", "", {
     timezone: z.string().optional().describe("IANA timezone name (e.g., 'Asia/Tokyo')"),
     format: z.string().optional().describe("Time format (e.g., 'HH:mm:ss')")
 }, async ({ timezone, format }) => {
